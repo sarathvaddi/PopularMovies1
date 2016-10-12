@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">PopularMovies</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+
+    <string name="menu_popular_item">sort by most popular</string>
+    <string name="menu_top_rated_item">sort by top rated</string>
+    <string name="movie_details_trailer">Trailer</string>
+    <string name="text_network_error">Device not connected to Internet.. Please check Internet Connection!!!</string>
+    <string name="movie_list_server_error">Server Error!!!</string>
+</resources>
