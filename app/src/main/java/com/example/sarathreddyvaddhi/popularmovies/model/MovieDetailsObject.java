@@ -16,6 +16,7 @@ public class MovieDetailsObject implements Parcelable {
     private String title;
     private String backdrop_path;
     private String vote_average;
+    private String id;
 
 
     protected MovieDetailsObject(Parcel in) {
@@ -27,6 +28,7 @@ public class MovieDetailsObject implements Parcelable {
         title = in.readString();
         backdrop_path = in.readString();
         vote_average = in.readString();
+        id = in.readString();
     }
 
     public static final Creator<MovieDetailsObject> CREATOR = new Creator<MovieDetailsObject>() {
@@ -48,7 +50,7 @@ public class MovieDetailsObject implements Parcelable {
 
     public MovieDetailsObject(String poster_path, String adult, String overview,
                               String release_date, String original_title,
-                              String title, String backdrop_path, String vote_average) {
+                              String title, String backdrop_path, String vote_average, String id) {
         this.poster_path = poster_path;
         this.adult = adult;
         this.overview = overview;
@@ -57,6 +59,8 @@ public class MovieDetailsObject implements Parcelable {
         this.title = title;
         this.backdrop_path = backdrop_path;
         this.vote_average = vote_average;
+        this.id = id;
+
     }
 
     @Override
@@ -69,6 +73,7 @@ public class MovieDetailsObject implements Parcelable {
         dest.writeString(title);
         dest.writeString(backdrop_path);
         dest.writeString(vote_average);
+        dest.writeString(id);
     }
 
     public String getPoster_path() {
@@ -133,5 +138,13 @@ public class MovieDetailsObject implements Parcelable {
 
     public void setVote_average(String vote_average) {
         this.vote_average = vote_average;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 }

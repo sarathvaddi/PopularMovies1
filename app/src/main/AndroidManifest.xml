@@ -21,6 +21,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        
+        <provider
+            android:authorities="com.example.sarathreddyvaddhi.popularmovies"
+            android:name=".model.db.MoviesProvider"/>
     </application>
 
 </manifest>

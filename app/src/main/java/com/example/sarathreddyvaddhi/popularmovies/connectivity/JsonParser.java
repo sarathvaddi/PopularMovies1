@@ -24,6 +24,7 @@ public class JsonParser {
     private static final String TAG_originalTitle = "original_title";
     private static final String TAG_backDropPath = "backdrop_path";
     private static final String TAG_voteAverage ="vote_average";
+    private static final String TAG_id = "id";
     private static final String TAG = JsonParser.class.getSimpleName();
 
 
@@ -34,6 +35,7 @@ public class JsonParser {
     public String original_title;
     public String backDropPath;
     public String voteAverage;
+    public String id;
 
 
     ArrayList<GetResultsSet> feeds = new ArrayList<GetResultsSet>();
@@ -82,11 +84,13 @@ public class JsonParser {
             original_title = r.getString(TAG_originalTitle);
             backDropPath = r.getString(TAG_backDropPath);
             voteAverage = r.getString(TAG_voteAverage);
+            id = r.getString(TAG_id);
+
         } catch (JSONException e) {
             e.printStackTrace();
         }
         MovieDetailsObject movieDetailsObject = new MovieDetailsObject(posterPath, null, overview,
-                releaseDate, original_title, title, backDropPath,voteAverage);
+                releaseDate, original_title, title, backDropPath,voteAverage,id);
         Log.d(TAG," posterPath "+posterPath);
         return movieDetailsObject;
     }
